@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru" data-theme="powder">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Саида Биякаева — сопровождение здоровья</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Саида Биякаева, наставник по здоровью и партнёр Coral Club. Мягкое сопровождение для женщин и детей: вода, детокс, энергия, красота.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Палитры: data-theme на <html>. Бордо Саиды — только текст, кнопки, линии. */
+  :root,[data-theme="powder"]{
+    --bg:#f7ede8; --bg-alt:#efdfd8; --surface:#fbf5f2;
+    --text:#3a1019; --text-mute:#7a5a5e; --accent:#6b1f2e; --accent-ink:#fbf5f2;
+    --line:rgba(107,31,46,.18); --brass:#a87d55;
+    --shot-a:#e8d3cb; --shot-b:#d9bcb2; --shot-ink:#7a5a5e;
+    --final-bg:#6b1f2e; --final-text:#f7ede8; --final-mute:#e2c4bb;
+  }
+  [data-theme="milk"]{
+    --bg:#fbf8f5; --bg-alt:#f1e7e3; --surface:#ffffff;
+    --text:#2c1a1d; --text-mute:#76676a; --accent:#7a2236; --accent-ink:#fff;
+    --line:rgba(44,26,29,.14); --brass:#b08a63;
+    --shot-a:#efe5e1; --shot-b:#e0d0ca; --shot-ink:#76676a;
+    --final-bg:#f1e7e3; --final-text:#2c1a1d; --final-mute:#76676a;
+  }
+  [data-theme="rose"]{
+    --bg:#f4e4e3; --bg-alt:#fbf3f1; --surface:#fffaf8;
+    --text:#43121f; --text-mute:#80585f; --accent:#8c2840; --accent-ink:#fff;
+    --line:rgba(140,40,64,.2); --brass:#b4876a;
+    --shot-a:#ead1cf; --shot-b:#dbb6b3; --shot-ink:#80585f;
+    --final-bg:#8c2840; --final-text:#fff4f2; --final-mute:#f0c9c9;
+  }
+  :root{ --wrap:1180px; --gut:clamp(16px,4vw,40px); }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font:400 17px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+  .display{font-family:Forum,serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.02;text-wrap:balance;color:var(--accent)}
+  .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+  .num{font-family:Forum,serif;color:var(--brass);font-size:20px;letter-spacing:.06em}
+  p{text-wrap:pretty}
+
+  .btn{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);padding:16px 26px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .25s,color .25s,border-color .25s}
+  .btn:hover{background:transparent;color:var(--accent)}
+  .btn-ghost{background:transparent;color:var(--accent)}
+  .btn-ghost:hover{background:var(--accent);color:var(--accent-ink)}
+  .btn svg{width:18px;height:18px}
+  :focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  .shot{position:relative;background:linear-gradient(165deg,var(--shot-a) 0%,var(--shot-b) 100%);overflow:hidden}
+  .shot img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
+  .shot::after{content:attr(data-art);position:absolute;inset:auto 0 0 0;padding:16px;font-size:12px;line-height:1.5;color:var(--shot-ink);letter-spacing:.02em}
+
+  .top{position:absolute;inset:0 0 auto 0;z-index:5}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;height:84px}
+  .logo{font-family:Forum,serif;font-size:20px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--accent)}
+  .menu{display:flex;gap:32px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  .menu a{text-decoration:none;color:var(--text-mute)} .menu a:hover{color:var(--accent)}
+
+  .hero{min-height:100svh;display:grid;grid-template-columns:1.1fr .9fr}
+  .hero-text{display:flex;flex-direction:column;justify-content:center;padding:140px var(--gut) 72px max(var(--gut),calc((100vw - var(--wrap))/2 + var(--gut)))}
+  .hero h1{font-size:clamp(40px,5vw,76px);margin:22px 0 28px}
+  .hero .lead{max-width:30em;color:var(--text-mute);font-size:18px}
+  .hero .actions{margin-top:40px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .hero .note{font-size:14px;color:var(--text-mute)}
+  .hero .shot{min-height:560px}
+  .facts{border-top:1px solid var(--line);margin-top:64px;padding-top:20px;display:flex;gap:40px;flex-wrap:wrap;font-size:14px;color:var(--text-mute)}
+  .facts b{display:block;font-family:Forum,serif;font-weight:400;font-size:30px;color:var(--accent);line-height:1.1}
+
+  section{padding:clamp(80px,11vw,150px) 0}
+  .sec-head{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-bottom:64px}
+  .sec-head h2{font-size:clamp(34px,4.4vw,60px)}
+
+  .signs{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);margin-inline:-24px}
+  .signs li{list-style:none;padding:28px 24px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:48px 1fr;font-size:19px}
+  .signs li:nth-child(odd){border-right:1px solid var(--line)}
+    .signs-foot{margin-top:40px;max-width:40em;color:var(--text-mute)}
+  .signs-foot strong{color:var(--accent);font-weight:600}
+
+  .areas{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-inline:-12px}
+  .area{padding:12px 12px 24px}
+  .area .shot{aspect-ratio:4/5}
+  .area h3{font-family:Forum,serif;font-weight:400;font-size:28px;text-transform:uppercase;margin:22px 0 8px;color:var(--accent)}
+  .area p{font-size:15px;color:var(--text-mute)}
+
+  .light-sec{background:var(--bg-alt)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-inline:-28px}
+  .step{padding:32px 28px 32px}
+  .step+.step{border-left:1px solid var(--line)}
+  .step h3{font-family:Forum,serif;font-weight:400;font-size:30px;text-transform:uppercase;margin:16px 0 12px;line-height:1.05;color:var(--accent)}
+  .step p{color:var(--text-mute);font-size:16px}
+
+  .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,96px);align-items:center}
+  .about .shot{aspect-ratio:4/5}
+  .about h2{font-size:clamp(34px,4.4vw,60px);margin:20px 0 28px}
+  .about p+p{margin-top:18px}
+  .about p{color:var(--text-mute)}
+  .about .quote{font-family:Forum,serif;font-size:26px;line-height:1.3;color:var(--accent);border-left:1px solid var(--brass);padding-left:24px;margin:36px 0}
+
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .review{background:var(--surface);border:1px solid var(--line);padding:32px;display:flex;flex-direction:column;justify-content:space-between;min-height:280px}
+  .review p{font-size:16px}
+  .review footer{margin-top:28px;font-size:13px;color:var(--text-mute);letter-spacing:.04em}
+  .todo{border-style:dashed}
+
+  .faq{border-top:1px solid var(--line)}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq summary{list-style:none;cursor:pointer;padding:26px 48px 26px 0;font-size:20px;font-weight:500;position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"";position:absolute;right:8px;top:50%;width:14px;height:14px;border-right:1px solid var(--accent);border-bottom:1px solid var(--accent);transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+  .faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+  .faq details p{padding:0 0 28px;max-width:44em;color:var(--text-mute)}
+
+  .final{position:relative;overflow:hidden;background:var(--final-bg);color:var(--final-text)}
+  .final .shot{position:absolute;inset:0;z-index:0;background:none}
+  .final .shot img{object-position:right center}
+  .final::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,color-mix(in srgb,var(--final-bg) 92%,transparent) 0%,color-mix(in srgb,var(--final-bg) 78%,transparent) 50%,transparent 80%)}
+  .final .shot::after{display:none}
+  .final .wrap{position:relative;z-index:2}
+  .final .display{color:var(--final-text)}
+  .final h2{font-size:clamp(40px,5.4vw,78px);margin:22px 0 26px;max-width:10em}
+  .final p{color:var(--final-mute);max-width:26em;margin:0 0 40px}
+  .final .btn{background:var(--final-text);color:var(--final-bg);border-color:var(--final-text)}
+  [data-theme="milk"] .final .btn{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+
+  /* Интерактивные карточки: подъём, «магнит» за курсором, светлый тон */
+  .lift{position:relative;cursor:default;transform:translate3d(0,0,0);transition:transform .45s cubic-bezier(.2,.8,.2,1),background-color .3s ease,box-shadow .45s ease;-webkit-tap-highlight-color:transparent}
+  .lift.is-on{z-index:2;background-color:var(--surface);transform:translate3d(var(--mx,0px),calc(var(--my,0px) - 8px),0);box-shadow:0 22px 44px -22px rgba(107,31,46,.35),0 2px 8px rgba(107,31,46,.06)}
+  .lift.is-on .num{color:var(--accent)}
+  .lift .num,.lift h3{transition:color .3s}
+  .review.lift.is-on{border-color:transparent}
+  @media (prefers-reduced-motion:reduce){ .lift.is-on{transform:none} }
+  .foot{border-top:1px solid var(--line);padding:36px 0 120px;font-size:13px;color:var(--text-mute)}
+  .foot .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .foot .disc{max-width:44em}
+
+  .sticky{position:fixed;left:16px;right:16px;bottom:16px;z-index:20;display:none;justify-content:center}
+  .sticky .btn{width:100%;justify-content:center;box-shadow:0 10px 30px rgba(60,10,20,.25)}
+
+
+  @media (max-width:980px){ .areas{grid-template-columns:repeat(2,1fr)} .reviews{grid-template-columns:1fr} }
+  @media (max-width:820px){
+    body{font-size:16px}
+    .menu{display:none}
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero .shot{order:-1;min-height:0;aspect-ratio:4/5;max-height:72svh}
+    .hero-text{padding:40px var(--gut) 64px}
+    .facts{gap:28px}
+    .sec-head{grid-template-columns:1fr;margin-bottom:40px}
+    .signs{grid-template-columns:1fr}
+    .signs{margin-inline:-16px}
+    .signs li:nth-child(n){padding:22px 16px;border-right:0}
+    .areas{margin-inline:-8px} .area{padding:8px 8px 20px}
+    .steps{grid-template-columns:1fr}
+    .steps{margin-inline:-16px}
+    .step,.step+.step{border-left:0;padding:28px 16px;border-bottom:1px solid var(--line)}
+    .about{grid-template-columns:1fr}
+    .sticky{display:flex}
+    .final::before{background:color-mix(in srgb,var(--final-bg) 78%,transparent)}
+    .final .shot img{object-position:72% center}
+  }
+  @media (max-width:520px){ .areas{grid-template-columns:1fr} }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">Саида</a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#approach">Подход</a><a href="#steps">Как я работаю</a><a href="#about">Обо мне</a><a href="#faq">Вопросы</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 1. Первый экран -->
+  <section class="hero" style="padding:0">
+    <div class="hero-text">
+      <span class="eyebrow">Наставник по здоровью · партнёр Coral Club</span>
+      <h1 class="display">Ищу причину,<br>а не симптом</h1>
+      <p class="lead">Помогаю женщинам и детям вернуть силы и лёгкость. Разбираемся, откуда усталость, подбираем натуральные продукты Coral Club и идём дальше вместе, без спешки.</p>
+      <div class="actions">
+        <a class="btn wa" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12Z"/></svg>Написать в WhatsApp</a>
+        <span class="note">Первый разговор бесплатный</span>
+      </div>
+      <div class="facts">
+        <div><b>9+ лет</b>в wellness</div>
+        <div><b>4 детей</b>мама, знаю всё на себе</div>
+        <div><b>Лично</b>сопровождаю каждую</div>
+      </div>
+    </div>
+    <figure class="shot" data-art="ФОТО САИДЫ: по пояс, белый жакет, мягкий дневной свет, светлый фон. Файл img/saida-hero.jpg">
+      <img src="img/saida-hero.jpg" alt="Саида Биякаева" onerror="this.remove()">
+    </figure>
+  </section>
+
+  <!-- 2. Знакомо? -->
+  <section id="approach">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Знакомо?</span>
+        <h2 class="display">Когда вроде бы здорова, а сил нет</h2>
+      </div>
+      <ul class="signs">
+        <li class="lift"><span class="num">01</span>К обеду уже хочется лечь, а впереди ещё дети, дом и работа</li>
+        <li class="lift"><span class="num">02</span>Тянет на сладкое и кофе, хотя ты знаешь, что потом будет хуже</li>
+        <li class="lift"><span class="num">03</span>Кожа тусклая, волосы и ногти ломкие, отражение в зеркале не радует</li>
+        <li class="lift"><span class="num">04</span>Анализы в норме, а чувствуешь себя не в норме</li>
+        <li class="lift"><span class="num">05</span>Ребёнок капризный и вялый, а ты не понимаешь, с чего начать</li>
+        <li class="lift"><span class="num">06</span>Пробовала диеты и добавки, но бросала: непонятно, что пить и зачем</li>
+      </ul>
+      <p class="signs-foot"><strong>Это не характер и не «возраст».</strong> Часто причина в простых вещах: вода, питание, сон, нагрузка. С ними можно работать мягко и без крайностей. Именно с этого я и начинаю.</p>
+    </div>
+  </section>
+
+  <!-- 3. Направления -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">С чем помогаю</span>
+        <h2 class="display">Четыре направления заботы</h2>
+      </div>
+      <div class="areas">
+        <article class="area lift">
+          <figure class="shot" data-art="Стакан воды в солнечном луче, светлый фон. img/water.jpg"><img src="img/water.jpg" alt="" onerror="this.remove()"></figure>
+          <h3>Детокс</h3>
+          <p>Мягкое очищение без голодовок: вода, питание и продукты, которые поддерживают организм.</p>
+        </article>
+        <article class="area lift">
+          <figure class="shot" data-art="Утро, руки держат чашку у окна. img/energy.jpg"><img src="img/energy.jpg" alt="" onerror="this.remove()"></figure>
+          <h3>Энергия</h3>
+          <p>Чтобы просыпаться отдохнувшей и не держаться на кофе до вечера.</p>
+        </article>
+        <article class="area lift">
+          <figure class="shot" data-art="Профиль женщины, боковой свет, кожа крупно. img/beauty.jpg"><img src="img/beauty.jpg" alt="" onerror="this.remove()"></figure>
+          <h3>Красота</h3>
+          <p>Кожа, волосы, ногти. Красота, которая идёт изнутри, а не только из баночки.</p>
+        </article>
+        <article class="area lift">
+          <figure class="shot" data-art="Рука мамы и ладошка ребёнка, фрукты на столе. img/kids.jpg"><img src="img/kids.jpg" alt="" onerror="this.remove()"></figure>
+          <h3>Детям</h3>
+          <p>Бережная поддержка для малышей и школьников. Всё обсуждаем с вашим педиатром.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Как я работаю -->
+  <section id="steps" class="light-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Как я работаю</span>
+        <h2 class="display">Идём в твоём темпе</h2>
+      </div>
+      <div class="steps">
+        <div class="step lift"><span class="num">01</span><h3>Разговор</h3><p>Пишешь мне в WhatsApp. Спокойно разбираем, что беспокоит, как ты питаешься, спишь и сколько пьёшь воды. Это бесплатно и ни к чему не обязывает.</p></div>
+        <div class="step lift"><span class="num">02</span><h3>Подбор</h3><p>Предлагаю простой план: привычки и продукты Coral Club под твою задачу. Объясняю, что, когда и зачем принимать. Без лишних баночек.</p></div>
+        <div class="step lift"><span class="num">03</span><h3>Сопровождение</h3><p>Я на связи всё время, пока ты идёшь к результату. Отвечаю на вопросы и корректирую план, если что-то идёт не так.</p></div>
+      </div>
+      <div style="margin-top:56px"><a class="btn btn-ghost wa" href="#">Начать с разговора</a></div>
+    </div>
+  </section>
+
+  <!-- 5. Обо мне -->
+  <section id="about">
+    <div class="wrap about">
+      <figure class="shot" data-art="ВТОРОЕ ФОТО САИДЫ: в жизни, дома или с продуктами, тёплый свет. img/saida-about.jpg">
+        <img src="img/saida-about.jpg" alt="Саида Биякаева" onerror="this.remove()">
+      </figure>
+      <div>
+        <span class="eyebrow">Обо мне</span>
+        <h2 class="display">Саида Биякаева</h2>
+        <p>Я мама четверых детей и больше девяти лет занимаюсь здоровьем семьи. Начинала в декрете, когда искала, как вернуть силы себе и помочь детям. Сначала разбиралась ради своей семьи, потом начала помогать подругам. Так это и стало моим делом.</p>
+        <p class="quote">«Я не ставлю диагнозов и не обещаю чудес. Я помогаю увидеть картину целиком и сделать первые шаги».</p>
+        <p>Работаю с продуктами Coral Club, потому что сама пользуюсь ими много лет и знаю, как они работают в обычной жизни мамы, а не только в теории.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Отзывы -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Отзывы</span>
+        <h2 class="display">Что говорят девочки</h2>
+      </div>
+      <p style="color:var(--text-mute);max-width:36em">Здесь скоро появятся истории женщин, с которыми мы уже прошли этот путь.</p>
+    </div>
+  </section>
+
+  <!-- 7. Вопросы -->
+  <section id="faq" class="light-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Вопросы</span>
+        <h2 class="display">Что обычно спрашивают</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Это лекарства?</summary><p>Нет. Продукты Coral Club относятся к БАД и функциональному питанию, они не заменяют лечение. Если у вас есть диагноз, беременность или вы подбираете что-то ребёнку, обязательно согласуйте план с врачом. Я подскажу, о чём его спросить.</p></details>
+        <details><summary>Сколько это стоит?</summary><p>Разговор и подбор бесплатные. Платите только за продукты, которые решите взять. Я помогу оформить клубную карту, по ней продукты дешевле, чем в розницу.</p></details>
+        <details><summary>Меня будут уговаривать на бизнес?</summary><p>Нет. Если вам интересно только здоровье, мы говорим только о здоровье. О партнёрстве рассказываю, только если вы сами спросите.</p></details>
+        <details><summary>Работаете онлайн?</summary><p>Да, всё сопровождение идёт в WhatsApp. Продукты доставляют по всей России.</p></details>
+        <details><summary>Через сколько будет результат?</summary><p>У всех по-разному, и я не буду называть сроки наугад. Первые изменения в самочувствии многие замечают в первые недели, если меняют привычки, а не только пьют продукты.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Финал -->
+  <section class="final">
+    <figure class="shot" data-art=""><img src="img/peony.jpg" alt="" onerror="this.remove()"></figure>
+    <div class="wrap">
+      <span class="eyebrow">Начнём с разговора</span>
+      <h2 class="display">Позаботься о себе так же, как о своих близких</h2>
+      <p>Напиши мне, что тебя беспокоит. Отвечу сама, обычно в течение дня.</p>
+      <a class="btn wa" href="#">Написать в WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Саида Биякаева · независимый партнёр Coral Club</span>
+    <span class="disc">Информация на сайте не является медицинской рекомендацией. БАД не является лекарственным средством. Перед применением проконсультируйтесь с врачом.</span>
+  </div>
+</footer>
+
+<div class="sticky"><a class="btn wa" href="#">Написать в WhatsApp</a></div>
+
+<script>
+  // Одна точка правки: номер и текст первого сообщения
+  const WA = 'https://wa.me/79894764183?text=' + encodeURIComponent('Здравствуйте, Саида! Я с вашего сайта, хочу узнать подробнее.');
+  document.querySelectorAll('a.wa').forEach(a => { a.href = WA; a.target = '_blank'; a.rel = 'noopener'; });
+
+
+  // Карточки-«магниты». Мышь: подъём при наведении + лёгкое притяжение к курсору. Телефон: подсветка по касанию.
+  const cards = document.querySelectorAll('.lift');
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  const calm = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const off = c => { c.classList.remove('is-on'); c.style.removeProperty('--mx'); c.style.removeProperty('--my'); };
+  cards.forEach(c => {
+    if (fine) {
+      c.addEventListener('pointerenter', () => c.classList.add('is-on'));
+      c.addEventListener('pointerleave', () => off(c));
+      if (!calm) c.addEventListener('pointermove', e => {
+        const r = c.getBoundingClientRect();
+        c.style.setProperty('--mx', ((e.clientX - r.left) / r.width - .5) * 10 + 'px');
+        c.style.setProperty('--my', ((e.clientY - r.top) / r.height - .5) * 8 + 'px');
+      });
+    } else {
+      c.addEventListener('click', () => { cards.forEach(o => o !== c && off(o)); c.classList.add('is-on'); });
+    }
+  });
+  if (!fine) document.addEventListener('click', e => { if (!e.target.closest('.lift')) cards.forEach(off); });
+</script>
+</body>
+</html>
