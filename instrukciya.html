@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Как разместить свою страницу</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f7ede8;--alt:#efdfd8;--surface:#fbf5f2;--text:#3a1019;--mute:#7a5a5e;--accent:#6b1f2e;--brass:#a87d55;--line:rgba(107,31,46,.18)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font:400 17px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  main{max-width:680px;margin:0 auto;padding:48px 16px 96px}
+  .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+  h1{font:400 clamp(34px,7vw,54px)/1.05 Forum,serif;text-transform:uppercase;color:var(--accent);margin:14px 0 18px;text-wrap:balance}
+  h2{font:400 clamp(26px,5vw,34px)/1.1 Forum,serif;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+  .lead,.sub{color:var(--mute)}
+  .sub{margin-bottom:20px}
+  .toc{margin:28px 0 8px;display:grid;gap:8px}
+  .toc a{display:flex;gap:12px;text-decoration:none;color:var(--text);padding:12px 16px;background:var(--surface);border:1px solid var(--line)}
+  .toc b{font:400 18px Forum,serif;color:var(--brass);min-width:24px}
+  section{margin-top:56px;padding-top:32px;border-top:1px solid var(--line)}
+  ol.steps{list-style:none;counter-reset:s;display:grid;gap:14px}
+  ol.steps>li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:4px}
+  ol.steps>li::before{content:counter(s);font:400 20px/1.4 Forum,serif;color:var(--brass)}
+  .btnname{display:inline-block;background:var(--surface);border:1px solid var(--line);padding:0 8px;font-weight:600;font-size:15px;white-space:nowrap}
+  .copy{margin-top:10px;display:flex;border:1px solid var(--line);background:var(--surface)}
+  .copy code{flex:1;min-width:0;padding:12px 14px;font:500 14px/1.4 Manrope;overflow-wrap:anywhere;color:var(--accent)}
+  .copy button{flex:none;border:0;border-left:1px solid var(--line);background:var(--accent);color:#fff;padding:0 16px;font:600 13px Manrope;letter-spacing:.06em;cursor:pointer;min-width:118px}
+  .copy button.ok{background:var(--brass)}
+  .copy.text code{white-space:pre-line;color:var(--text);font-weight:400;font-size:15px}
+  .copy.text{flex-direction:column}
+  .copy.text button{border-left:0;border-top:1px solid var(--line);padding:14px 16px}
+  .tip{margin-top:18px;padding:16px 18px;background:var(--alt);font-size:15px}
+  .tip b{color:var(--accent)}
+  .note{margin-top:10px;font-size:14px;color:var(--mute)}
+  .check{list-style:none;display:grid;gap:8px;margin-top:8px}
+  .check li::before{content:"— ";color:var(--brass)}
+  footer{margin-top:64px;font-size:14px;color:var(--mute)}
+</style>
+</head>
+<body>
+<main>
+  <span class="eyebrow">Инструкция для Саиды</span>
+  <h1>Как разместить свою страницу</h1>
+  <p class="lead">Здесь всё по шагам: Instagram, сторис, WhatsApp. Каждую ссылку можно скопировать кнопкой «Скопировать» и вставить куда нужно.</p>
+  <p class="lead" style="margin-top:12px">Важно: в каждое место ставьте <b>свою</b> ссылку из этой инструкции. Тогда человек, который вам напишет, пришлёт сообщение вроде «Пишу с вашего сайта (ссылка из Instagram)», и вы будете видеть, откуда он пришёл.</p>
+
+  <nav class="toc" aria-label="Разделы">
+    <a href="#bio"><b>1</b>Ссылка в шапке Instagram</a>
+    <a href="#stories"><b>2</b>Ссылка в сторис и в «Актуальном»</a>
+    <a href="#posts"><b>3</b>Посты, рилсы и личные сообщения</a>
+    <a href="#wa-profile"><b>4</b>Профиль и автоответ WhatsApp</a>
+    <a href="#wa-status"><b>5</b>Статус WhatsApp</a>
+    <a href="#check"><b>6</b>Как проверить и считать пользу</a>
+  </nav>
+
+  <!-- 1 -->
+  <section id="bio">
+    <h2>1. Шапка Instagram</h2>
+    <p class="sub">Это главное место: сюда заходят все, кто заинтересовался вашим постом или рилсом.</p>
+    <ol class="steps">
+      <li><div>Откройте Instagram и нажмите на свою аватарку внизу справа, откроется профиль.</div></li>
+      <li><div>Нажмите <span class="btnname">Редактировать профиль</span>.</div></li>
+      <li><div>Нажмите <span class="btnname">Ссылки</span>, потом <span class="btnname">Добавить внешнюю ссылку</span>.</div></li>
+      <li><div>Скопируйте ссылку и вставьте её в поле «URL»:
+        <div class="copy"><code data-from="insta"></code><button type="button">Скопировать</button></div></div></li>
+      <li><div>В поле «Название» напишите, например: <b>Обо мне и запись на разговор</b>.</div></li>
+      <li><div>Нажмите <span class="btnname">Готово</span> или галочку вверху.</div></li>
+      <li><div>Если там уже есть ссылка на WhatsApp, передвиньте новую ссылку на первое место: удерживайте её пальцем и перетащите вверх. Instagram показывает в шапке первую ссылку.</div></li>
+    </ol>
+    <div class="tip"><b>Текст для шапки профиля</b> (поле «О себе»), можно скопировать целиком:
+      <div class="copy text"><code>Наставник по здоровью · партнёр Coral Club
+Мама 4 детей · 9+ лет в wellness
+Ищу причину, а не симптом
+👇 Обо мне и запись на разговор</code><button type="button">Скопировать</button></div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="stories">
+    <h2>2. Сторис</h2>
+    <p class="sub">Ссылка в сторис кликабельная: человек нажимает и сразу попадает на вашу страницу.</p>
+    <ol class="steps">
+      <li><div>Создайте сторис как обычно: фото, видео или просто фон с текстом.</div></li>
+      <li><div>Вверху нажмите на значок стикеров: квадратик со смайликом.</div></li>
+      <li><div>Выберите стикер <span class="btnname">Ссылка</span>.</div></li>
+      <li><div>Вставьте ссылку для сторис:
+        <div class="copy"><code data-from="stories"></code><button type="button">Скопировать</button></div></div></li>
+      <li><div>Нажмите <span class="btnname">Настроить текст стикера</span> и напишите, например: <b>Познакомиться со мной</b>. Так понятнее, чем просто адрес сайта.</div></li>
+      <li><div>Нажмите <span class="btnname">Готово</span>, поставьте стикер на видное место и опубликуйте сторис.</div></li>
+    </ol>
+    <div class="tip"><b>Чтобы сторис не исчезла через сутки</b>, сохраните её в «Актуальное»: откройте свою сторис, нажмите <span class="btnname">Выделить</span> (сердечко внизу) и создайте новую подборку, например «Обо мне». Она будет всегда висеть под шапкой профиля.</div>
+    <p class="note">Когда это работает лучше всего: после рилса или поста о здоровье, когда вас спрашивают «а как с тобой связаться» или «что ты делаешь». Одна сторис со ссылкой раз в 1–2 недели — нормальный ритм.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="posts">
+    <h2>3. Посты, рилсы, личные сообщения</h2>
+    <ol class="steps">
+      <li><div><b>Посты и рилсы.</b> Ссылки в подписи Instagram не нажимаются, поэтому пишите в конце: <b>«Подробнее обо мне — по ссылке в шапке профиля»</b>.</div></li>
+      <li><div><b>Личные сообщения в Instagram и WhatsApp.</b> Когда спрашивают «кто ты», «что за продукты», «как ты работаешь», не пишите длинный ответ, отправьте эту ссылку:
+        <div class="copy"><code data-from="friend"></code><button type="button">Скопировать</button></div></div></li>
+      <li><div><b>Чаты и группы</b> (школы здоровья, мамские чаты), где это уместно:
+        <div class="copy"><code data-from="chat"></code><button type="button">Скопировать</button></div></div></li>
+    </ol>
+  </section>
+
+  <!-- 4 -->
+  <section id="wa-profile">
+    <h2>4. Профиль и автоответ WhatsApp</h2>
+    <p class="sub">Это работает в приложении WhatsApp Business. В обычном WhatsApp пункта «Инструменты для бизнеса» нет, там пропустите этот раздел и переходите к статусу.</p>
+    <h3 style="font-size:17px;margin:8px 0 12px">Ссылка в профиле</h3>
+    <ol class="steps">
+      <li><div>Откройте WhatsApp Business, нажмите <span class="btnname">⋮</span> или <span class="btnname">Настройки</span>.</div></li>
+      <li><div>Выберите <span class="btnname">Инструменты для бизнеса</span>, затем <span class="btnname">Профиль компании</span>.</div></li>
+      <li><div>В поле <span class="btnname">Веб-сайт</span> вставьте ссылку:
+        <div class="copy"><code data-from="auto"></code><button type="button">Скопировать</button></div></div></li>
+      <li><div>Нажмите <span class="btnname">Сохранить</span>.</div></li>
+    </ol>
+
+    <h3 style="font-size:17px;margin:28px 0 12px">Автоответ (приветственное сообщение)</h3>
+    <ol class="steps">
+      <li><div>Там же, в <span class="btnname">Инструменты для бизнеса</span>, откройте <span class="btnname">Приветственное сообщение</span>.</div></li>
+      <li><div>Нажмите на текст сообщения, удалите старый и вставьте новый:
+        <div class="copy text"><code data-text="auto"></code><button type="button">Скопировать</button></div></div></li>
+      <li><div>Нажмите <span class="btnname">Сохранить</span>.</div></li>
+    </ol>
+    <p class="note">Почему новый текст: человек, который написал вам впервые, сразу получает ссылку и может познакомиться с вами, пока вы заняты. В прежнем тексте была фраза «без лекарств». По закону о рекламе так писать про продукты нельзя, поэтому мы её убрали.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="wa-status">
+    <h2>5. Статус WhatsApp</h2>
+    <p class="sub">Статус видят все, у кого сохранён ваш номер. Это бесплатное напоминание о вас.</p>
+    <ol class="steps">
+      <li><div>Откройте вкладку <span class="btnname">Обновления</span> (раньше называлась «Статус»).</div></li>
+      <li><div>Нажмите на значок карандаша, чтобы написать текстовый статус.</div></li>
+      <li><div>Напишите короткую фразу и вставьте ссылку, например:
+        <div class="copy text"><code data-text="status"></code><button type="button">Скопировать</button></div></div></li>
+      <li><div>Нажмите стрелку «Отправить». Ссылка в статусе нажимается, а под ней появляется картинка с вашей страницей.</div></li>
+    </ol>
+    <div class="tip"><b>Ещё вариант:</b> выложите в статус своё фото или фото продукта, а ссылку добавьте в подпись к нему. Ставьте такой статус раз в неделю, например в понедельник утром.</div>
+  </section>
+
+  <!-- 6 -->
+  <section id="check">
+    <h2>6. Проверка и польза</h2>
+    <ol class="steps">
+      <li><div><b>Проверьте сами.</b> Нажмите ссылку в своей шапке Instagram и на открывшейся странице нажмите «Написать в WhatsApp». Откроется чат с вашим же номером и текстом «Пишу с вашего сайта (ссылка из Instagram)». Значит, всё работает. Само сообщение отправлять не нужно.</div></li>
+      <li><div><b>Считайте обращения.</b> Раз в неделю посмотрите, сколько сообщений начинается со слов «Пишу с вашего сайта» или «Я с вашего сайта», и откуда они пришли. Запишите в заметки: дата, имя, откуда, купила ли.</div></li>
+      <li><div><b>Через месяц</b> будет видно, какое место приводит людей лучше всего. Туда и стоит чаще ставить ссылку.</div></li>
+    </ol>
+    <p style="margin-top:20px"><b>QR-код</b> для визиток, пакетов и печатных материалов вам пришлёт Валерий отдельным файлом.</p>
+  </section>
+
+  <footer>Если что-то не получается или в приложении всё выглядит иначе, сделайте скриншот и отправьте Валерию, подскажем.</footer>
+</main>
+<script>
+  // Один адрес на всю инструкцию: после переезда на свой домен поменять только здесь.
+  const SITE = 'https://valerairon70-hub.github.io/saida-preview/';
+  const link = from => SITE + '?from=' + from;
+  const TEXTS = {
+    auto: 'Здравствуйте! Меня зовут Саида 🌿\nПомогаю женщинам и детям мягко наладить питание, воду и привычки, с продуктами Coral Club и личным сопровождением.\n\nПознакомиться со мной поближе: ' + link('auto') + '\n\nНапишите, что вас беспокоит. Отвечу сама, обычно в течение дня.',
+    status: 'Забочусь о здоровье семьи уже 9 лет. Рассказала о себе и о том, как работаю 👇\n' + link('status')
+  };
+  document.querySelectorAll('code[data-from]').forEach(c => c.textContent = link(c.dataset.from));
+  document.querySelectorAll('code[data-text]').forEach(c => c.textContent = TEXTS[c.dataset.text]);
+
+  const copy = async t => {
+    try { await navigator.clipboard.writeText(t); return true; } catch (e) {
+      const a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0';
+      document.body.appendChild(a); a.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (e2) {} a.remove(); return ok;
+    }
+  };
+  document.querySelectorAll('.copy button').forEach(b => b.addEventListener('click', async () => {
+    const ok = await copy(b.previousElementSibling.textContent);
+    b.textContent = ok ? 'Скопировано' : 'Выделите вручную';
+    b.classList.toggle('ok', ok);
+    setTimeout(() => { b.textContent = 'Скопировать'; b.classList.remove('ok'); }, 2000);
+  }));
+</script>
+</body>
+</html>
