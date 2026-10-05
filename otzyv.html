@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ваше мнение о странице Саиды</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f7ede8;--surface:#fbf5f2;--text:#3a1019;--mute:#7a5a5e;--accent:#6b1f2e;--brass:#a87d55;--line:rgba(107,31,46,.18)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font:400 17px/1.6 Manrope,system-ui,sans-serif;padding:48px 16px 80px;-webkit-font-smoothing:antialiased}
+  main{max-width:620px;margin:0 auto}
+  .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+  h1{font:400 clamp(34px,7vw,52px)/1.05 Forum,serif;text-transform:uppercase;color:var(--accent);margin:14px 0 18px;text-wrap:balance}
+  .lead{color:var(--mute)}
+  .lead a{color:var(--accent)}
+  form{margin-top:40px;display:grid;gap:28px}
+  fieldset{border:0;display:grid;gap:12px}
+  legend,label.q{font-weight:600;font-size:17px;margin-bottom:4px}
+  .num{font-family:Forum,serif;color:var(--brass);margin-right:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips input{position:absolute;opacity:0;pointer-events:none}
+  .chips label{border:1px solid var(--line);background:var(--surface);padding:10px 16px;cursor:pointer;font-size:15px;transition:background .2s,color .2s,border-color .2s}
+  .chips input:checked+label{background:var(--accent);border-color:var(--accent);color:#fff}
+  .chips input:focus-visible+label{outline:2px solid var(--brass);outline-offset:2px}
+  textarea,input[type=text]{width:100%;border:1px solid var(--line);background:var(--surface);padding:14px 16px;font:inherit;font-size:16px;color:var(--text);resize:vertical}
+  textarea{min-height:96px}
+  textarea:focus,input[type=text]:focus{outline:2px solid var(--brass);outline-offset:0;border-color:transparent}
+  button{justify-self:start;border:1px solid var(--accent);background:var(--accent);color:#fff;padding:16px 28px;font:500 13px Manrope;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+  button:hover{background:transparent;color:var(--accent)}
+  .hint{font-size:14px;color:var(--mute)}
+  .err{color:#a1263a;font-size:14px;display:none}
+</style>
+</head>
+<body>
+<main>
+  <span class="eyebrow">Пара минут вашего времени</span>
+  <h1>Как вам страница Саиды?</h1>
+  <p class="lead">Мы сделали Саиде личную страницу. Откройте её, полистайте с телефона, а потом ответьте на несколько вопросов. Честное мнение поможет сделать страницу лучше.</p>
+  <p class="lead" style="margin-top:12px"><a href="./?from=team" target="_blank" rel="noopener">Открыть страницу Саиды →</a></p>
+
+  <form id="f" novalidate>
+    <fieldset>
+      <legend><span class="num">01</span>Первое впечатление</legend>
+      <div class="chips" data-name="Впечатление">
+        <input type="radio" name="q1" id="q1a" value="Очень нравится"><label for="q1a">Очень нравится</label>
+        <input type="radio" name="q1" id="q1b" value="Нравится"><label for="q1b">Нравится</label>
+        <input type="radio" name="q1" id="q1c" value="Нормально"><label for="q1c">Нормально</label>
+        <input type="radio" name="q1" id="q1d" value="Не моё"><label for="q1d">Не моё</label>
+      </div>
+    </fieldset>
+
+    <div><label class="q" for="q2"><span class="num">02</span>Что больше всего откликнулось?</label>
+      <textarea id="q2" data-name="Откликнулось" placeholder="Фраза, фото, блок, ощущение…"></textarea></div>
+
+    <div><label class="q" for="q3"><span class="num">03</span>Что смутило или показалось лишним?</label>
+      <textarea id="q3" data-name="Смутило" placeholder="Можно честно, нам это важно"></textarea></div>
+
+    <div><label class="q" for="q4"><span class="num">04</span>Чего не хватило? Что бы вы добавили?</label>
+      <textarea id="q4" data-name="Добавить" placeholder="Вопрос, который остался без ответа, раздел, кнопка…"></textarea></div>
+
+    <fieldset>
+      <legend><span class="num">05</span>Вы бы сами написали Саиде через эту страницу?</legend>
+      <div class="chips" data-name="Написала бы">
+        <input type="radio" name="q5" id="q5a" value="Да"><label for="q5a">Да</label>
+        <input type="radio" name="q5" id="q5b" value="Возможно"><label for="q5b">Возможно</label>
+        <input type="radio" name="q5" id="q5c" value="Нет"><label for="q5c">Нет</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="num">06</span>Хотели бы похожую страницу для себя?</legend>
+      <div class="chips" data-name="Хочет себе страницу">
+        <input type="radio" name="q6" id="q6a" value="Да, интересно"><label for="q6a">Да, интересно</label>
+        <input type="radio" name="q6" id="q6b" value="Пока нет"><label for="q6b">Пока нет</label>
+      </div>
+    </fieldset>
+
+    <div><label class="q" for="q7"><span class="num">07</span>Как вас зовут?</label>
+      <input type="text" id="q7" data-name="Имя" placeholder="Можно не указывать" autocomplete="given-name"></div>
+
+    <p class="err" id="err">Ответьте хотя бы на один вопрос.</p>
+    <button type="submit">Отправить в WhatsApp</button>
+    <p class="hint">Откроется WhatsApp с готовым сообщением, останется нажать «Отправить».</p>
+  </form>
+</main>
+<script>
+  // Номер, на который приходят ответы. Пусто — человек сам выберет, кому отправить.
+  const TO = '';
+  document.getElementById('f').addEventListener('submit', e => {
+    e.preventDefault();
+    const lines = [];
+    document.querySelectorAll('.chips').forEach(g => {
+      const c = g.querySelector('input:checked');
+      if (c) lines.push(g.dataset.name + ': ' + c.value);
+    });
+    document.querySelectorAll('textarea, input[type=text]').forEach(t => {
+      if (t.value.trim()) lines.push(t.dataset.name + ': ' + t.value.trim());
+    });
+    if (!lines.length) { document.getElementById('err').style.display = 'block'; return; }
+    const text = 'Отзыв о странице Саиды\n\n' + lines.join('\n');
+    location.href = 'https://wa.me/' + TO + '?text=' + encodeURIComponent(text);
+  });
+</script>
+</body>
+</html>

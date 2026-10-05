@@ -105,6 +105,8 @@
   .review{background:var(--surface);border:1px solid var(--line);padding:32px;display:flex;flex-direction:column;justify-content:space-between;min-height:280px}
   .review p{font-size:16px}
   .review footer{margin-top:28px;font-size:13px;color:var(--text-mute);letter-spacing:.04em}
+  .reviews-note{margin-top:20px;font-size:13px;color:var(--text-mute)}
+  .review p::before{content:"«";display:block;font-family:Forum,serif;font-size:44px;line-height:.6;color:var(--brass);margin-bottom:14px}
   .todo{border-style:dashed}
 
   .faq{border-top:1px solid var(--line)}
@@ -335,8 +337,32 @@
 
 <script>
   // Одна точка правки: номер и текст первого сообщения
-  const WA = 'https://wa.me/79894764183?text=' + encodeURIComponent('Здравствуйте, Саида! Я с вашего сайта, хочу узнать подробнее.');
-  document.querySelectorAll('a.wa').forEach(a => { a.href = WA; a.target = '_blank'; a.rel = 'noopener'; });
+  const PHONE = '79894764183';
+  // Метки источников: ссылка вида ?from=insta меняет первое сообщение, и Саида видит, откуда пришёл человек.
+  const SOURCES = {
+    insta:   'ссылка из Instagram',
+    stories: 'ссылка из сторис',
+    status:  'ссылка из статуса WhatsApp',
+    auto:    'ссылка из автоответа',
+    chat:    'ссылка из чата',
+    friend:  'ссылка от знакомой',
+    qr:      'QR-код',
+    team:    'ссылка от команды'
+  };
+  let from = '';
+  try { from = new URLSearchParams(location.search).get('from') || sessionStorage.getItem('saida-from') || ''; sessionStorage.setItem('saida-from', from); } catch (e) {}
+  const label = SOURCES[from];
+  const text = label
+    ? 'Здравствуйте, Саида! Пишу с вашего сайта (' + label + '). Хочу узнать подробнее.'
+    : 'Здравствуйте, Саида! Я с вашего сайта, хочу узнать подробнее.';
+  const WA = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text);
+
+  // Яндекс Метрика: вписать номер счётчика, когда он будет создан. Клик по кнопке WhatsApp считается целью.
+  const METRIKA_ID = null;
+  document.querySelectorAll('a.wa').forEach(a => {
+    a.href = WA; a.target = '_blank'; a.rel = 'noopener';
+    a.addEventListener('click', () => { if (METRIKA_ID && window.ym) ym(METRIKA_ID, 'reachGoal', 'whatsapp', { from: from || 'direct' }); });
+  });
 
 
   // Карточки-«магниты». Мышь: подъём при наведении + лёгкое притяжение к курсору. Телефон: подсветка по касанию.
