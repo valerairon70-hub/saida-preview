@@ -108,6 +108,9 @@
   .reviews-note{margin-top:20px;font-size:13px;color:var(--text-mute)}
   .review p::before{content:"«";display:block;font-family:Forum,serif;font-size:44px;line-height:.6;color:var(--brass);margin-bottom:14px}
   .todo{border-style:dashed}
+  .reviews.single{grid-template-columns:1fr;max-width:760px}
+  .reviews.single .review{min-height:0}
+  .reviews.single .review p{font-size:clamp(17px,2.2vw,21px);line-height:1.55}
 
   .faq{border-top:1px solid var(--line)}
   .faq details{border-bottom:1px solid var(--line)}
@@ -293,7 +296,10 @@
         <span class="eyebrow">Отзывы</span>
         <h2 class="display">Что говорят девочки</h2>
       </div>
-      <p style="color:var(--text-mute);max-width:36em">Здесь скоро появятся истории женщин, с которыми мы уже прошли этот путь.</p>
+      <div class="reviews single">
+        <blockquote class="review lift"><p>Саиду отличает глубокое знание продукции компании и большой практический опыт её использования. Она всегда проявляет тактичность и внимание к людям.</p><footer>Людмила Анатольевна</footer></blockquote>
+      </div>
+      <p class="reviews-note">Отзывы опубликованы с согласия авторов.</p>
     </div>
   </section>
 
