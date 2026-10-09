@@ -109,6 +109,8 @@
   .review p::before{content:"«";display:block;font-family:Forum,serif;font-size:44px;line-height:.6;color:var(--brass);margin-bottom:14px}
   .todo{border-style:dashed}
   .reviews.single{grid-template-columns:1fr;max-width:760px}
+  .reviews.two{grid-template-columns:repeat(2,1fr)}
+  .reviews.two .review{min-height:0}
   .reviews.single .review{min-height:0}
   .reviews.single .review p{font-size:clamp(17px,2.2vw,21px);line-height:1.55}
 
@@ -148,7 +150,7 @@
   .sticky .btn{width:100%;justify-content:center;box-shadow:0 10px 30px rgba(60,10,20,.25)}
 
 
-  @media (max-width:980px){ .areas{grid-template-columns:repeat(2,1fr)} .reviews{grid-template-columns:1fr} }
+  @media (max-width:980px){ .areas{grid-template-columns:repeat(2,1fr)} .reviews,.reviews.two{grid-template-columns:1fr} }
   @media (max-width:820px){
     body{font-size:16px}
     .menu{display:none}
@@ -296,8 +298,11 @@
         <span class="eyebrow">Отзывы</span>
         <h2 class="display">Что говорят девочки</h2>
       </div>
-      <div class="reviews single">
+      <div class="reviews two">
         <blockquote class="review lift"><p>Саиду отличает глубокое знание продукции компании и большой практический опыт её использования. Она всегда проявляет тактичность и внимание к людям.</p><footer>Людмила Анатольевна</footer></blockquote>
+        <blockquote class="review lift"><p>Саида хорошо знает продукты Coral Club. У неё можно консультироваться — она подробно ответит на все вопросы. У неё хороший опыт. Я ей доверяю, потому что она сама потребитель и на собственном примере показывает пользу продуктов.</p><footer>Марьям</footer></blockquote>
+        <blockquote class="review lift"><p>Надёжный человек, к которому можно обратиться с вопросом о здоровье.</p><footer>Зайнаб М.</footer></blockquote>
+        <blockquote class="review lift"><p>Саида, я очень рада, что встретила тебя в самую трудную минуту, когда моей дочке нужна была помощь. Ты очень классная, слушать твои рекомендации по здоровью — просто удовольствие.</p><footer>Патимат</footer></blockquote>
       </div>
       <p class="reviews-note">Отзывы опубликованы с согласия авторов.</p>
     </div>
